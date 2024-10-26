@@ -12,6 +12,7 @@
  */
 package com.netflix.sel.type;
 
+import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.UUID;
@@ -24,7 +25,7 @@ import java.util.UUID;
  * permissions e.g. FilePermission("/dev/random", "read").
  */
 public final class SelJavaUUID extends AbstractSelType {
-  private static final Random rnd = new Random();
+  private static final Random rnd = new SecureRandom();
 
   private final UUID val;
 
